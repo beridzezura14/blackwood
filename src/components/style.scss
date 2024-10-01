@@ -1,0 +1,38 @@
+@import '../main.scss';
+
+
+
+// .hero{
+//     padding-top: 4rem;
+//     max-width: 100%;
+// }
+
+.main__hero{
+    position: relative;
+    overflow-x: hidden;
+    padding: 4.6rem 0;
+
+
+
+    .hero__text{
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .slick-prev:before, .slick-next:before {
+        color: black; /* ისრების ფერი */
+        font-size: 150px; /* ისრების ზომა */
+        position: absolute;
+        top: 0;
+      }
+      .slick-next {
+        display: block !important;
+        visibility: visible !important;
+      }
+      
+      .slick-next:before {
+        color: black; /* შეცვალე ფერი */
+        font-size: 20px; /* შეცვალე ზომა */
+      }
+
+}

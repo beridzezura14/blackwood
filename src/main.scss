@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+$primary-dark: #111111;
+$primary-grey: #888888;
+$primary-gold: #b9a16b;
+$primary-white: #fff;
+$light-grey: #c0c0c0;
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Inter", sans-serif;
+    
+}
+
+button, input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+
+
+.main__header{
+    position: relative;
+    z-index: 1;
+    
+    .fixed__header{
+        background-color: $primary-white;
+        position: fixed;
+        width: 100%;
+        .header{
+            max-width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+
+            .logo{
+                position: relative;
+                z-index: 1;
+            }
+    
+            .burger{
+                position: relative;
+                z-index: 1;
+                display: grid;
+                gap: 4px;
+    
+                .burger-item{
+                    width: 25px;
+                    height: 2px;
+                    border-radius: 30px;
+                    background-color: $primary-dark;
+                    transition: .5s;
+                }
+
+                .burger__item__1.active{
+                    transform: rotate(-45deg) translateY(3px) translateX(-3px);
+                }
+                .burger__item__2.active{
+                    opacity: 0;
+                }
+                .burger__item__3.active{
+
+                    transform: rotate(45deg) translateY(-5.5px) translateX(-5.5px);
+                }
+            }
+            .header__menu{
+                background-color: $primary-white;
+                position: fixed;
+                height: 100dvh;
+                width: 100%;
+                top: 0;
+                left: 0;
+                padding-top: 5rem;
+                transform: translateX(100%);
+                transition: .5s;
+                overflow-y: auto;
+
+                .form__search{
+                    max-width: 90%;
+                    margin: auto;
+                    position: relative;
+
+                    form{
+                        width: 100%;
+                        // margin: auto;
+                
+                        input{
+                            width: 100%;
+                            padding: 10px 10px;
+                            border: 1px solid $primary-gold;
+                        }
+                    }
+                    ion-icon{
+                        position: absolute;
+                        padding: 10px;
+                        top: 0;
+                        right: 0;
+                        font-size: 18px;
+                    }
+                }
+
+                .find__product{
+                    width: 90%;
+                    margin: auto;
+                    margin-top: 1rem;
+                    overflow: hidden;
+                    overflow-x: auto;
+
+                    .item__flex{
+                        display: flex;
+                        gap: 1rem;
+                        
+                        img{
+                            width: 150px;
+                            height: 150px;
+                        }
+                        .item{
+                            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                            display: flex;
+                            gap: 10px;
+                            // align-items: center;
+
+                            div{
+                                padding: 10px 10px 0 0;
+                                width: 120px;
+                                p{
+                                    padding-top: 10px;
+                                }
+
+                                .find__btn__item{
+                                    padding: 5px 10px;
+                                    background-color: $primary-gold;
+                                    margin-top: 1rem;
+                                    border-radius: 30px;
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+                .menu__items{
+                    max-width: 90%;
+                    margin: auto;
+
+                    ul{
+                        display: grid;
+                        gap: 5px;
+
+                        li{
+                            padding: 10px 0;
+                            border-bottom: 1px solid $light-grey;
+                            a{
+                                color: $primary-dark;
+                            }
+                        }
+                        li:last-child{
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            .header__menu.active{
+                transform: translateX(0);
+            }
+
+            .additonal__section{
+                max-width: 90%;
+                margin: 2rem auto 0;
+                padding-top: 2rem;
+                border-top: 1px solid $primary-dark;
+
+                display: flex;
+                gap: 1rem;
+
+                ion-icon{
+                    font-size: 30px;
+                    color: $primary-dark;
+                }
+
+                div{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    p{
+                        position: absolute;
+                        top: -10px;
+                        right: -10px;
+                        background-color: $primary-gold;
+                        padding: 3px 7px;
+                        border-radius: 50%;
+
+                    }
+                }
+                .profile__nav{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                    padding: 5px 25px;
+                }
+            }
+            
+        }
+    }
+
+}
