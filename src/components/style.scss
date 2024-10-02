@@ -2,37 +2,114 @@
 
 
 
-// .hero{
-//     padding-top: 4rem;
-//     max-width: 100%;
-// }
-
 .main__hero{
     position: relative;
     overflow-x: hidden;
     padding: 4.6rem 0;
-
-
-
+    
     .hero__text{
+        color: $primary-white;
         max-width: 90%;
         margin: auto;
+        padding-bottom: 5rem;
+        overflow-x: hidden;
+
+        .overflow{
+          overflow: hidden;
+
+          h1{
+            font-size: 58px;
+          }
+          p{
+            margin-top: 1rem;
+            line-height: 25px;
+            font-size: 14px;
+          }
+        }
+
+
+        .btn{
+          background-color: $primary-gold;
+          padding: 15px 60px;
+          font-size: 15px;
+          margin-top: 2rem;
+          color: $primary-dark;
+          border-radius: 30px;
+        }
+
     }
 
-    .slick-prev:before, .slick-next:before {
-        color: black; /* ისრების ფერი */
-        font-size: 150px; /* ისრების ზომა */
-        position: absolute;
-        top: 0;
-      }
-      .slick-next {
-        display: block !important;
-        visibility: visible !important;
-      }
-      
-      .slick-next:before {
-        color: black; /* შეცვალე ფერი */
-        font-size: 20px; /* შეცვალე ზომა */
-      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// arrows ------------------------------------------------------
+
+
+.slick-prev {
+  z-index: 1;
+  position: absolute;
+  top: 90% !important;
+  left: 70%;
+  color: white !important;
+  opacity: 1 !important;
+}
+.slick-prev:before {
+  font-size: 30px;
+  padding: 14px 16px 24px;
+  color: white !important;
+
 
 }
+.slick-next {
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  top: 90%;
+  right: 10%;
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.slick-next:before {
+  border-radius: 50%;
+  font-size: 30px;
+  color: white !important;
+
+}
+
+
+@media (min-width: 768px){
+  .slick-prev {
+    left: 79%;
+  }
+}
+@media (min-width: 1024px){
+  .slick-prev {
+    left: 82%;
+  }
+}
+@media (min-width: 1440px){
+  .slick-prev {
+    left: 84%;
+  }
+}
+

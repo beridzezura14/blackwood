@@ -20,6 +20,9 @@ $light-grey: #c0c0c0;
     
 }
 
+// body{
+//     background-color: #888888;
+// }
 button, input{
     border: none;
     outline: none;
@@ -54,6 +57,7 @@ button, input{
                 z-index: 1;
                 display: grid;
                 gap: 4px;
+                cursor: pointer;
     
                 .burger-item{
                     width: 25px;
@@ -129,11 +133,14 @@ button, input{
                             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
                             display: flex;
                             gap: 10px;
+                            padding: 0 0 1rem 0;
+                            
                             // align-items: center;
 
                             div{
                                 padding: 10px 10px 0 0;
                                 width: 120px;
+                                
                                 p{
                                     padding-top: 10px;
                                 }
@@ -143,6 +150,7 @@ button, input{
                                     background-color: $primary-gold;
                                     margin-top: 1rem;
                                     border-radius: 30px;
+                                    color: $primary-dark;
                                 }
                             }
                         }
