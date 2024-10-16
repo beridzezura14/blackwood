@@ -74,19 +74,12 @@ function Hero() {
             <Slider {...slider}>
                     {
                         heroList.map((item) => (
-                            <div key={item.id}> 
-                                <div style={{
-                                    height: "92dvh",
-                                    width: "100%",
-                                    backgroundColor: "grey",
-                                    display: "flex",
-                                    // justifyContent: "center",
-                                    alignItems: 'center',
+                            <div  key={item.id}> 
+                                <div className="hero" style={{
                                     backgroundImage: `linear-gradient(#0000009a, #000000c9),
                                     url(${item.img})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
-                                    overflowX: "hidden"
                                 }}>
                                     <div  className='hero__text'>
                                         <div className='overflow'>

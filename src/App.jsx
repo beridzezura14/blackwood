@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { productList } from "./components/AllProduct";
 import Header from "./components/Header"
 
@@ -20,6 +20,20 @@ function App() {
     product.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // სიმულაცია საიტის ჩატვირთვისთვის (მაგალითად, მონაცემების API-დან მოპოვება)
+    setTimeout(() => {
+      setLoading(false); // როცა საიტი ჩაიტვირთება, loading იქნება false
+    }, 1000); // 1 წამი, აქ შეგიძლია დააყენო შენი რეალური დატვირთვის დრო
+  }, []);
+
+  if (loading) {
+    return <h2 className="loading">Loading <span style={{color: "#b9a16b"}}> ...</span></h2>;
+  }
+
   return (
     <>
 
@@ -32,6 +46,8 @@ function App() {
                 clearList={clearList}
           />
         <Routes>
+          <Route path="/" element={<Home />} />
+
           <Route path="/Home" element={<Home />} />
           <Route path="/Product" element={<Product />} />
 

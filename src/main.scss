@@ -29,6 +29,13 @@ button, input{
     background-color: transparent;
 }
 
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
 
 
 .main__header{
@@ -39,6 +46,7 @@ button, input{
         background-color: $primary-white;
         position: fixed;
         width: 100%;
+
         .header{
             max-width: 90%;
             margin: auto;
@@ -46,6 +54,8 @@ button, input{
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem 0;
+
+
 
             .logo{
                 position: relative;
@@ -78,6 +88,7 @@ button, input{
                     transform: rotate(45deg) translateY(-5.5px) translateX(-5.5px);
                 }
             }
+
             .header__menu{
                 background-color: $primary-white;
                 position: fixed;
@@ -89,140 +100,260 @@ button, input{
                 transform: translateX(100%);
                 transition: .5s;
                 overflow-y: auto;
-
-                .form__search{
+                .max__width{
                     max-width: 90%;
                     margin: auto;
-                    position: relative;
 
-                    form{
-                        width: 100%;
-                        // margin: auto;
-                
-                        input{
+                    .form__search{
+                        position: relative;
+    
+                        form{
                             width: 100%;
-                            padding: 10px 10px;
-                            border: 1px solid $primary-gold;
+                            // margin: auto;
+                    
+                            input{
+                                width: 100%;
+                                padding: 10px 10px;
+                                border: 1px solid $primary-gold;
+                            }
+                        }
+                        ion-icon{
+                            position: absolute;
+                            padding: 10px;
+                            top: 0;
+                            right: 0;
+                            font-size: 18px;
                         }
                     }
-                    ion-icon{
-                        position: absolute;
-                        padding: 10px;
-                        top: 0;
-                        right: 0;
-                        font-size: 18px;
-                    }
-                }
-
-                .find__product{
-                    width: 90%;
-                    margin: auto;
-                    margin-top: 1rem;
-                    overflow: hidden;
-                    overflow-x: auto;
-
-                    .item__flex{
-                        display: flex;
-                        gap: 1rem;
-                        
-                        img{
-                            width: 150px;
-                            height: 150px;
-                        }
-                        .item{
-                            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    
+                    .find__product{
+                        margin-top: 1rem;
+                        overflow: hidden;
+                        overflow-x: auto;
+    
+                        .item__flex{
                             display: flex;
-                            gap: 10px;
-                            padding: 0 0 1rem 0;
+                            gap: 1rem;
                             
-                            // align-items: center;
-
-                            div{
-                                padding: 10px 10px 0 0;
-                                width: 120px;
+                            img{
+                                width: 150px;
+                                height: 150px;
+                            }
+                            .item{
+                                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                                display: flex;
+                                gap: 10px;
+                                padding: 0 0 1rem 0;
                                 
-                                p{
-                                    padding-top: 10px;
+                                // align-items: center;
+    
+                                div{
+                                    padding: 10px 10px 0 0;
+                                    width: 120px;
+                                    
+                                    p{
+                                        padding-top: 10px;
+                                    }
+    
+                                    .find__btn__item{
+                                        padding: 5px 10px;
+                                        background-color: $primary-gold;
+                                        margin-top: 1rem;
+                                        border-radius: 30px;
+                                        color: $primary-dark;
+                                        cursor: pointer;
+                                    }
                                 }
-
-                                .find__btn__item{
-                                    padding: 5px 10px;
-                                    background-color: $primary-gold;
-                                    margin-top: 1rem;
-                                    border-radius: 30px;
+                            }
+                        }
+                    }
+    
+                    .menu__items{
+    
+                        ul{
+                            display: grid;
+                            gap: 5px;
+    
+                            li{
+                                padding: 10px 0;
+                                border-bottom: 1px solid $light-grey;
+                                a{
                                     color: $primary-dark;
                                 }
                             }
-                        }
-
-                    }
-
-                }
-
-                .menu__items{
-                    max-width: 90%;
-                    margin: auto;
-
-                    ul{
-                        display: grid;
-                        gap: 5px;
-
-                        li{
-                            padding: 10px 0;
-                            border-bottom: 1px solid $light-grey;
-                            a{
-                                color: $primary-dark;
+                            li:last-child{
+                                border-bottom: none;
                             }
                         }
-                        li:last-child{
-                            border-bottom: none;
+                    }
+                    .additonal__section{
+                        margin: 2rem auto 0;
+                        padding-top: 2rem;
+                        border-top: 1px solid $primary-dark;
+        
+                        display: flex;
+                        gap: 1rem;
+        
+                        ion-icon{
+                            font-size: 30px;
+                            color: $primary-dark;
+                        }
+        
+                        div{
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+        
+                            p{
+                                position: absolute;
+                                top: -10px;
+                                right: -10px;
+                                background-color: $primary-gold;
+                                padding: 3px 7px;
+                                border-radius: 50%;
+        
+                            }
+                        }
+                        .profile__nav{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                            padding: 5px 25px;
                         }
                     }
                 }
+                
             }
             .header__menu.active{
                 transform: translateX(0);
-            }
-
-            .additonal__section{
-                max-width: 90%;
-                margin: 2rem auto 0;
-                padding-top: 2rem;
-                border-top: 1px solid $primary-dark;
-
-                display: flex;
-                gap: 1rem;
-
-                ion-icon{
-                    font-size: 30px;
-                    color: $primary-dark;
-                }
-
-                div{
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-
-                    p{
-                        position: absolute;
-                        top: -10px;
-                        right: -10px;
-                        background-color: $primary-gold;
-                        padding: 3px 7px;
-                        border-radius: 50%;
-
-                    }
-                }
-                .profile__nav{
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-                    padding: 5px 25px;
-                }
             }
             
         }
     }
 
+}
+
+
+
+@media (min-width: 1024px){
+    .main__header{
+        .fixed__header{
+            .header{
+                align-items: flex-start;
+                padding: 0;
+                .burger{
+                    display: none;
+                }
+                .logo{
+                    padding-top: 1.8rem;
+                }
+                .header__menu{
+                    background-color: $primary-white;
+                    position: static;
+                    height: auto;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    padding: 1.5rem 0 1rem 0;
+                    transform: translateX(0%);
+                    transition: .5s;
+                    overflow-y: auto !important;
+
+                    .max__width{
+                        max-width: 100%;
+                        display: flex;
+                        gap: 1rem;
+                        // align-items: center;
+                        // justify-content: space-between;
+                        justify-content: flex-start;
+                        padding-left: 3rem;
+                        margin-right: 10px;
+
+                        .search__row{
+                            position: relative;
+                            
+                            .form__search{
+                                max-width: 200px;
+                                width: 100%;
+                                
+                            }
+                            .find__product{
+
+                                .item__flex{
+                                    display: grid !important;
+                                    grid-template-columns: repeat(3, 1fr) !important;
+
+                                    .item{
+                                        padding-right: 2rem;
+                                        padding-bottom: 0;
+                                    }
+
+                                }
+                            
+
+                                // max-width: 10%;
+                            }
+
+                        }
+
+                        .menu__items{
+                            position: absolute;
+                            right: 200px;
+    
+                            ul{
+                                display: flex;
+                                gap: 1.5rem;
+        
+                                li{
+                                    padding: 10px 0;
+                                    border-bottom: none;
+                                    a{
+                                        color: $primary-dark;
+                                    }
+                                }
+                                li:last-child{
+                                    border-bottom: none;
+                                }
+                            }
+                        }
+                        .additonal__section{
+                            position: absolute;
+                            right: 15px;
+                            height: 40px;
+                            margin: 0;
+                            padding-top: 0rem;
+                            border-top: none;
+                            // position: relative !important;
+                            z-index: 11 !important;
+            
+                            display: flex;
+                            align-items: flex-start;
+
+                            gap: 1rem;
+            
+                            ion-icon{
+                                font-size: 30px;
+                                color: $primary-dark;
+                                cursor: pointer;
+                            }
+
+                            .profile__nav{
+                                gap: 0px;
+                                box-shadow: none;
+                                padding: 5px ;
+                                transform: translate(5px, -5px);
+
+                                h5{
+                                    display: none;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
 }

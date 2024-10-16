@@ -25,61 +25,69 @@ function Header( {setSearchTerm, searchTerm, filteredProducts, clearList} ) {
                     </div>
 
                     <div className={isOpen ? "header__menu active" : "header__menu"}>
-                        <div className='form__search'>
-                            <form>
-                                <input 
-                                type="text"
-                                placeholder="Search products..."
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)} />
-                            </form>
-                            {
-                                searchTerm.length > 0 ? 
-                                <ion-icon onClick={clearList} name="close-outline"></ion-icon> : 
-                                <ion-icon name="search-outline"></ion-icon>
-                            }
+                        <div className='max__width'>
+                            <div className='search__row'>
+                                <div className='form__search'>
+                                    <form>
+                                        <input 
+                                        type="text"
+                                        placeholder="Search products..."
+                                        value={searchTerm}
+                                        onChange={(e) => setSearchTerm(e.target.value)} />
 
-                        </div>
-                        <div className='find__product'>
-                            {
-                                searchTerm.length > 0 ?                       
-                            (<div className='item__flex'>
+                                        {
+                                            searchTerm.length > 0 ? 
+                                            <ion-icon onClick={clearList} name="close-outline"></ion-icon> : 
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        }
+
+                                    </form>
+                                </div>
+                                <div className='find__product'>
                                     {
-                                        filteredProducts.map((product) => (
-                                            <div className='item' key={product.id}>
-                                                <img src={product.img} alt="" />
-                                                <div>
-                                                    <h4>{product.name}</h4>
-                                                    <p>{product.price}.00 $</p>
-                                                    <button className='find__btn__item'>Details</button>
-                                                </div>
-                                            </div>
-                                        ))
+                                        searchTerm.length > 0 ?                       
+                                    (<div className='item__flex'>
+                                            {
+                                                filteredProducts.map((product) => (
+                                                    <div className='item' key={product.id}>
+                                                        <img src={product.img} alt="" />
+                                                        <div>
+                                                            <h4>{product.name}</h4>
+                                                            <p>{product.price}.00 $</p>
+                                                            <button className='find__btn__item'>Details</button>
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>) : ""
                                     }
-                                </div>) : ""
-                            }
-                        </div>
-                        <nav className='menu__items'>
-                            <ul>
-                                <li><a href="./home">Home</a></li>
-                                <li><a href="./Product">Product</a></li>
-                                <li><a href="">Cart</a></li>
-                                <li><a href="">Contact</a></li>
-                                <li><a href="./About">About</a></li>
-                            </ul>
-                        </nav>
-                        <div className='additonal__section'>
-                            <div className='profile__nav'>
-                                <ion-icon name="person-outline"></ion-icon>
-                                <h5>Profile</h5>
+                                </div>
                             </div>
-                            <div>
-                                <ion-icon name="heart-outline"></ion-icon>
-                                <p>0</p>
-                            </div>
-                            <div>
-                                <ion-icon name="cart-outline"></ion-icon>
-                                <p>0</p>
+                            <nav className='menu__items'>
+                                <ul>
+                                    <li><a href="./home">Home</a></li>
+                                    <li><a href="./Product">Product</a></li>
+                                    <li><a href="">Cart</a></li>
+                                    <li><a href="">Contact</a></li>
+                                    <li><a href="./About">About</a></li>
+                                </ul>
+                            </nav>
+                            <div className='additonal__section'>
+                                {/* <div>
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </div> */}
+                                <div className='profile__nav'>
+                                    <ion-icon name="person-outline"></ion-icon>
+                                    <h5>Profile</h5>
+                                </div>
+                                <div>
+                                    <ion-icon name="heart-outline"></ion-icon>
+                                    <p>0</p>
+                                </div>
+                                <div>
+                                    <ion-icon name="cart-outline"></ion-icon>
+                                    <p>0</p>
+                                </div>
                             </div>
                         </div>
                     </div>

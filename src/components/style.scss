@@ -6,41 +6,100 @@
     position: relative;
     overflow-x: hidden;
     padding: 4.6rem 0;
-    
-    .hero__text{
-        color: $primary-white;
-        max-width: 90%;
-        margin: auto;
-        padding-bottom: 5rem;
-        overflow-x: hidden;
 
-        .overflow{
-          overflow: hidden;
 
-          h1{
-            font-size: 58px;
+    .hero{
+      height: 92dvh;
+      width: 100%;
+      // background-color: grey;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      overflow-x: hidden;
+      
+      .hero__text{
+          color: $primary-white;
+          max-width: 90%;
+          // margin: auto;
+          padding-left: 5%;
+          padding-bottom: 5rem;
+          overflow-x: hidden;
+
+          .overflow{
+            overflow: hidden;
+  
+            h1{
+              font-size: 58px;
+            }
+            p{
+              margin-top: 1rem;
+              line-height: 25px;
+              font-size: 14px;
+            }
           }
-          p{
-            margin-top: 1rem;
-            line-height: 25px;
-            font-size: 14px;
+  
+  
+          .btn{
+            background-color: $primary-gold;
+            padding: 15px 60px;
+            font-size: 15px;
+            margin-top: 2rem;
+            color: $primary-dark;
+            border-radius: 30px;
           }
-        }
-
-
-        .btn{
-          background-color: $primary-gold;
-          padding: 15px 60px;
-          font-size: 15px;
-          margin-top: 2rem;
-          color: $primary-dark;
-          border-radius: 30px;
-        }
-
+  
+      }
     }
+    
 
 }
 
+.category{
+  max-width: 90%;
+  margin: auto;
+
+  .section__name{
+    border-bottom: 1px solid $primary-gold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+      padding: 1rem 0;
+    }
+
+    .arr{
+      display: flex;
+      gap: 10px;
+
+      button{
+        font-size: 30px;
+        cursor: pointer;
+        // color: $primary-gold;
+        color: $primary-grey;
+      }
+    }
+
+    // .arr{
+    //   display: flex;
+    //   gap: 10px;
+    //   .arr__buttons{
+    //     font-size: 24px;
+  
+    //   }
+    // }
+
+  }
+
+  .item__name{
+      color: $primary-gold;
+      padding: 1rem 0;
+      font-size: 30px;
+    }
+  
+
+}
+
+  
 
 
 
@@ -48,11 +107,13 @@
 
 
 
+@media (min-width: 1440px){
 
+  .category{
+    max-width: 1100px;
+  }
 
-
-
-
+}
 
 
 
@@ -95,8 +156,6 @@
   color: white !important;
 
 }
-
-
 @media (min-width: 768px){
   .slick-prev {
     left: 79%;
@@ -106,10 +165,30 @@
   .slick-prev {
     left: 82%;
   }
+  .main__hero{
+    .hero{
+      .hero__text{
+          .overflow{
+            h1{
+              font-size: 100px;
+            }
+            p{
+              font-size: 16px;
+              width: 600px;
+            }
+          }
+        }
+      }
+    }
 }
-@media (min-width: 1440px){
+@media (min-width: 1340px){
   .slick-prev {
     left: 84%;
+  }
+}
+@media (min-width: 1840px){
+  .slick-prev {
+    left: 85%;
   }
 }
 

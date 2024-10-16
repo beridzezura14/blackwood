@@ -1,0 +1,16 @@
+.swiper-slide{
+    padding: 1rem 0;
+    overflow: visible;
+    position: relative;
+}
+
+.swiper-slide img {
+    width: 100%; /* სურათის სიგანე */
+    height: auto; /* სურათის სიმაღლე */
+    object-fit: cover; /* სურათის დამახინჯების თავიდან აცილება */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none;
+}
