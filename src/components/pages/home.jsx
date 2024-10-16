@@ -1,13 +1,13 @@
 import Hero from "./sections/hero"
-import Category from "./sections/category"
+import CategoryItem from './sections/CtegoryItem'
 
-function home() {
+function Home() {
     return (
         <div>
             <Hero />
-            <Category />
+            <CategoryItem />
         </div>
     )
 }
 
-export default home
+export default Home
