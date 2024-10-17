@@ -39,7 +39,7 @@ const categoryList = [
 function Category() {
     const swiperRef = useRef(null);
     return (
-        <div>
+        <div className='main__catecory'>
 
 
             <div className='category'>
@@ -68,10 +68,10 @@ function Category() {
                         }, 
                     }}
                 >
-                <div className='category__item'>
+                <div>
                     {
                         categoryList.map(item => (
-                            <SwiperSlide key={item.id}>
+                            <SwiperSlide className='category__item' key={item.id}>
                                 <img src={item.img} alt={item.name} />
                                 <h2 className='item__name'>{item.name}</h2>
                             </SwiperSlide>
@@ -80,7 +80,6 @@ function Category() {
                 </div>
                 
             </Swiper>
-
             </div>
         </div>
     )

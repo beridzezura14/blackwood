@@ -48,12 +48,16 @@ function Header( {setSearchTerm, searchTerm, filteredProducts, clearList} ) {
                                         searchTerm.length > 0 ?                       
                                     (<div className='item__flex'>
                                             {
+
                                                 filteredProducts.map((product) => (
                                                     <div className='item' key={product.id}>
                                                         <img src={product.img} alt="" />
                                                         <div>
                                                             <h4>{product.name}</h4>
                                                             <p>{product.price}.00 $</p>
+                                                            {
+                                                                product.discount ? <p className='discount'>{product.oldPrice}.00 $</p> : " "
+                                                            }
                                                             <button className='find__btn__item'>Details</button>
                                                         </div>
                                                     </div>

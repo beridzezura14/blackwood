@@ -29,36 +29,49 @@ export const productList = [
       id: 1, 
       img: chair1,
       name: 'Pottery Vase', 
-      price: 85,
-      category: 'chair' 
+      price: 45,
+      category: 'chair',
+      discount: true,
+      oldPrice: 65
+
     },
     { 
       id: 2, 
       img: clock1,
       name: 'White Clock', 
       price: 35,
-      category: 'clock' 
+      category: 'clock',
+      discount: false,
+      oldPrice: 0
+
     },
     { 
       id: 3, 
       img: lamp1,
       name: 'Lamp B', 
-      price: 50,
-      category: 'lamp' 
+      price: 40,
+      category: 'lamp',
+      discount: true,
+      oldPrice: 60
     },
     { 
       id: 4, 
       img: leech1,
       name: 'Tea Maker', 
       price: 50,
-      category: 'leech' 
+      category: 'leech',
+      discount: false, 
+      oldPrice: 0
+
     },
     { 
       id: 5, 
       img: table1,
       name: 'Medium Wide Table', 
       price: 50,
-      category: 'table' 
+      category: 'table',
+      discount: false,
+      oldPrice: 0
     },
 
     // --
@@ -67,35 +80,50 @@ export const productList = [
       img: chair2,
       name: 'Gravida Condimentum', 
       price: 25,
-      category: 'chair' 
+      category: 'chair',
+      discount: false, 
+      oldPrice: 0
+
     },
     { 
       id: 7, 
       img: clock2,
       name: 'Black Clock', 
       price: 35,
-      category: 'clock' 
+      category: 'clock' ,
+      discount: false,
+      oldPrice: 0
+
     },
     { 
       id: 8, 
       img: lamp2,
       name: 'Table Lamp', 
       price: 45,
-      category: 'lamp' 
+      category: 'lamp',
+      discount: false, 
+      oldPrice: 0
+
     },
     { 
       id: 9, 
       img: leech2,
       name: 'Thermos', 
       price: 50,
-      category: 'leech' 
+      category: 'leech',
+      discount: false, 
+      oldPrice: 0
+
     },
     { 
       id: 10, 
       img: table2,
       name: 'Table X', 
       price: 50,
-      category: 'table' 
+      category: 'table',
+      discount: false,
+      oldPrice: 0
+
     },
     
     // --
@@ -104,21 +132,30 @@ export const productList = [
       img: chair3,
       name: 'Reflect Chest Drawers', 
       price: 65,
-      category: 'chair' 
+      category: 'chair',
+      discount: false, 
+      oldPrice: 0
+
     },
     { 
       id: 12, 
       img: leech3,
       name: 'Cleaner', 
       price: 50,
-      category: 'leech' 
+      category: 'leech',
+      discount: false, 
+      oldPrice: 0
+
     },
     { 
       id: 13, 
       img: table3,
       name: 'Magazine Table', 
       price: 50,
-      category: 'table' 
+      category: 'table',
+      discount: false, 
+      oldPrice: 0
+
     },
         // --
     { 
@@ -126,21 +163,30 @@ export const productList = [
       img: chair3,
       name: 'Reflect Chest Drawers', 
       price: 65,
-      category: 'chair' 
+      category: 'chair',
+      discount: false, 
+      oldPrice: 0
+
     },
     { 
       id: 15, 
       img: leech3,
       name: 'Cleaner', 
       price: 50,
-      category: 'leech' 
+      category: 'leech',
+      discount: false,
+      oldPrice: 0
+
     },
     { 
       id: 16, 
       img: table4,
       name: 'Magazine Table', 
       price: 50,
-      category: 'table' 
+      category: 'table',
+      discount: true,
+      oldPrice: 60,
+      
     },
     // --
     { 
@@ -148,56 +194,78 @@ export const productList = [
       img: chair4,
       name: 'Reflect Drawers', 
       price: 65,
-      category: 'chair' 
+      category: 'chair',
+      discount: false, 
+      oldPrice: 0
+
     },
     { 
       id: 18, 
       img: leech4,
       name: 'Twin Bottle', 
       price: 50,
-      category: 'leech' 
+      category: 'leech',
+      discount: false,
+      oldPrice: 0
+
     },
     { 
       id: 19, 
       img: chair5,
       name: 'Reflect', 
       price: 65,
-      category: 'chair' 
+      category: 'chair' ,
+      discount: false,
+      oldPrice: 0
+
     },
     { 
       id: 20,
       img: chair6,
       name: 'Reflect Drawers', 
-      price: 65,
-      category: 'chair' 
+      price: 35,
+      category: 'chair',
+      discount: true,
+      oldPrice: 60
     },
     { 
       id: 21, 
       img: chair7,
       name: 'Drawers', 
       price: 65,
-      category: 'chair' 
+      category: 'chair',
+      discount: false, 
+      oldPrice: 0
+
     },
     { 
       id: 22,
       img: chair8,
       name: 'Reflect Chest Drawers', 
       price: 65,
-      category: 'chair' 
+      category: 'chair',
+      discount: true,
+      oldPrice: 85
     },
     { 
       id: 23, 
       img: chair9,
       name: 'Chest Drawers', 
       price: 65,
-      category: 'chair' 
+      category: 'chair',
+      discount: false, 
+      oldPrice: 0
+
     },
     { 
       id: 24,
       img: chair10,
       name: 'Reflect Chest', 
       price: 65,
-      category: 'chair' 
+      category: 'chair',
+      discount: false, 
+      oldPrice: 0
+
     },
 
   ]

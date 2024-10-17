@@ -7,6 +7,8 @@ $primary-grey: #888888;
 $primary-gold: #b9a16b;
 $primary-white: #fff;
 $light-grey: #c0c0c0;
+$grey: #f2f2f2;
+$red: #ff6a6a;
 
 
 
@@ -40,7 +42,8 @@ button, input{
 
 .main__header{
     position: relative;
-    z-index: 1;
+    z-index: 11 !important;
+
     
     .fixed__header{
         background-color: $primary-white;
@@ -54,8 +57,6 @@ button, input{
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem 0;
-
-
 
             .logo{
                 position: relative;
@@ -154,7 +155,10 @@ button, input{
                                     p{
                                         padding-top: 10px;
                                     }
-    
+                                    .discount{
+                                        text-decoration:line-through;
+                                        color: rgb(255, 81, 81);
+                                    }
                                     .find__btn__item{
                                         padding: 5px 10px;
                                         background-color: $primary-gold;
