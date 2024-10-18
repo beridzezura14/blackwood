@@ -238,6 +238,37 @@ button, input{
 
 }
 
+.main__footer{
+    background-color: $primary-dark;
+    color: $primary-white;
+
+    .footer{
+        max-width: 90%;
+        margin: auto;
+        padding: 3rem 0;
+        display: grid;
+        gap: 1rem;
+        text-align: center;
+
+        .icon{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            ion-icon{
+                font-size: 20px;
+                border: 1px solid $primary-gold;
+                padding: 10px;
+                color: $primary-gold;
+                cursor: pointer;
+            }
+        }
+        p{
+            font-size: 17px;
+        }
+    }
+}
+
 
 
 @media (min-width: 1024px){
@@ -303,7 +334,7 @@ button, input{
 
                         .menu__items{
                             position: absolute;
-                            right: 200px;
+                            right: 120px;
     
                             ul{
                                 display: flex;
@@ -360,4 +391,5 @@ button, input{
             }
         }
     }
+
 }

@@ -80,10 +80,10 @@ function Header( {setSearchTerm, searchTerm, filteredProducts, clearList} ) {
                                 {/* <div>
                                     <ion-icon name="search-outline"></ion-icon>
                                 </div> */}
-                                <div className='profile__nav'>
+                                {/* <div className='profile__nav'>
                                     <ion-icon name="person-outline"></ion-icon>
                                     <h5>Profile</h5>
-                                </div>
+                                </div> */}
                                 <div>
                                     <ion-icon name="heart-outline"></ion-icon>
                                     <p>0</p>

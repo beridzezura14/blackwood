@@ -244,8 +244,8 @@ export const productList = [
       name: 'Reflect Chest Drawers', 
       price: 65,
       category: 'chair',
-      discount: true,
-      oldPrice: 85
+      discount: false,
+      oldPrice: 0
     },
     { 
       id: 23, 

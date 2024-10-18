@@ -51,35 +51,36 @@ function Category() {
                     </div>
                 </div>
 
-            <Swiper spaceBetween={30} // სლაიდებს შორის დაშორება
-                    slidesPerView={1} // მობილური ვერსიაზე ერთი სლაიდი
-                    navigation // ნავიგაციის ღილაკები
-                    pagination={{ clickable: true }} // პაგინაციის ღილაკები
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
-                    breakpoints={{
-                        640: {
-                            slidesPerView: 2, // 640px-ზე მეტი სიგანეზე ორი სლაიდი
-                        },
-                        768: {
-                            slidesPerView: 3, // 768px-ზე მეტი სიგანეზე სამი სლაიდი
-                        },  
-                        1024: {
-                            slidesPerView: 4, // 768px-ზე მეტი სიგანეზე სამი სლაიდი
-                        }, 
-                    }}
-                >
-                <div>
-                    {
-                        categoryList.map(item => (
-                            <SwiperSlide className='category__item' key={item.id}>
-                                <img src={item.img} alt={item.name} />
-                                <h2 className='item__name'>{item.name}</h2>
-                            </SwiperSlide>
-                        ))
-                    }
-                </div>
-                
-            </Swiper>
+                <Swiper spaceBetween={30} // სლაიდებს შორის დაშორება
+                        slidesPerView={1} // მობილური ვერსიაზე ერთი სლაიდი
+                        navigation // ნავიგაციის ღილაკები
+                        pagination={{ clickable: true }} // პაგინაციის ღილაკები
+                        onSwiper={(swiper) => (swiperRef.current = swiper)}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 2, // 640px-ზე მეტი სიგანეზე ორი სლაიდი
+                            },
+                            768: {
+                                slidesPerView: 2, // 768px-ზე მეტი სიგანეზე სამი სლაიდი
+                            },  
+                            1024: {
+                                slidesPerView: 4, // 1024px-ზე მეტი სიგანეზე სამი სლაიდი
+                            }, 
+                        }}
+                    >
+                    <div>
+                        {
+                            categoryList.map(item => (
+                                <SwiperSlide className='category__item' key={item.id}>
+                                    <img src={item.img} alt={item.name} />
+                                    <h2 className='item__name'>{item.name}</h2>
+                                    <p>(20)</p>
+                                </SwiperSlide>
+                            ))
+                        }
+                    </div>
+                    
+                </Swiper>
             </div>
         </div>
     )

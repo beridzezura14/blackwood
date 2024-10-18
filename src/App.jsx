@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { productList } from "./components/AllProduct";
 import Header from "./components/Header"
 import Home from "./components/pages/home";
+import Footer from "./components/Footer";
 import Product from "./components/pages/product";
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -47,12 +48,10 @@ function App() {
           />
         <Routes>
           <Route path="/" element={<Home />} />
-
           <Route path="/Home" element={<Home />}/>
           <Route path="/Product" element={<Product />} />
-
-
         </Routes>
+        <Footer />
       </Router>
     </>
   )
